@@ -53,6 +53,7 @@ body {
   align-items: flex-start;
   margin-top: 85px;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .top-element-sec {
   font-size: 14px;
@@ -86,13 +87,14 @@ body {
   align-items: center;
   flex-direction: flex-start;
   gap: 24px;
+  flex-wrap: wrap-reverse;
 }
 .third-element-first-item {
   font-weight: 400px;
   font-style: normal;
   font-size: 15px;
   color: var(--lightGrey);
-  width: 25%;
+  max-width: 310px;
 }
 .third-element-second-item {
   margin-top: 0;
@@ -102,10 +104,12 @@ body {
   text-align: right;
   margin-bottom: 75px;
 }
+
 button {
   font-size: 24px;
   font-weight: 600;
   padding: 12px 24px;
+  margin-top: 20px;
   margin-bottom: 40px;
   cursor: pointer;
 }
