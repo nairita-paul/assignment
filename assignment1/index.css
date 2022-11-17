@@ -4,6 +4,7 @@
   --green: #baff38;
   --lightGrey: #818181;
   --borderGrey: #414141;
+  --black: #121212;
 }
 
 body {
@@ -11,6 +12,8 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 300;
   color: var(--lightGrey);
+  margin: auto;
+  padding: auto;
 }
 
 header {
@@ -28,22 +31,26 @@ h1 {
 .circle {
   width: 40px;
   height: 40px;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   color: var(--green);
   border: 2px solid var(--green);
   border-radius: 50%;
   font-size: 9px;
+  background-color: var(--greenBG);
 }
-.one {
+.divider {
+  border: none;
   border-bottom: 2px solid var(--green);
-  padding: 0;
-  margin-top: 4px;
-  margin-bottom: 2px;
+  margin: 0;
+  width: 100%;
 }
+
+.one,
 .two {
-  margin-top: 2px;
-  margin-bottom: 4px;
-  padding: 0;
+  margin: auto;
 }
 
 .container {
@@ -115,6 +122,7 @@ header {
 }
 .side-article-item-top {
   display: flex;
+  position: relative;
   justify-content: space-between;
   gap: 12px;
   align-items: flex-start;
@@ -137,4 +145,31 @@ header {
 
 .side-article-item-bottom {
   font-size: 10px;
+}
+.side-article-item-top:hover,
+.side-article-item-top:hover > .side-article-item-top-title {
+  color: var(--green);
+  cursor: url("images/cursor.png"), auto;
+}
+.hover-items {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  gap: 5px;
+  left: -80px;
+}
+
+.hover-p {
+  margin: 0;
+  background-color: var(--green);
+  border-radius: 100px;
+  color: var(--black);
+  font-size: 8px;
+  font-weight: 600;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+}
+
+.side-article-item-top:hover > .hover-items {
+  visibility: visible;
 }
